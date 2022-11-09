@@ -25,7 +25,7 @@ class App2 extends StatelessWidget{
   Widget build (BuildContext context) {
     // TODO: implement createState
     return MaterialApp(
-      initialRoute:"/loginView",
+      initialRoute:"/splash",
       routes:{
         "/loginView":(context) => LoginView(),
         "/registerview":(context) => RegisterView(),
