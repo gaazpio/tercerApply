@@ -1,8 +1,10 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:first_project/src/objetcts/Perfil.dart';
+import 'package:flutter/material.dart';
 
 import '../firebase/fbAdmin.dart';
 import '../objetcts/Room.dart';
+import '../platform/PlatformAdmin.dart';
 
 class DataHolder{
 
@@ -13,9 +15,18 @@ class DataHolder{
   Room typeRoom= Room();
   FBAdmin fbAdmin = FBAdmin();
 
+  double dScreenWidth=0;
+  double dScreenHeigth=0;
+
+late PlatformAdmin platformAdmin;
+
   DataHolder._internal(){
     sMensaje="";
 
+  }
+
+  void initPlatform(BuildContext context){
+    platformAdmin= PlatformAdmin(context);
   }
 
   factory DataHolder(){
