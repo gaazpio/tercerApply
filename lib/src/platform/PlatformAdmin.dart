@@ -1,18 +1,23 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
 
 class PlatformAdmin{
-
      // int iEsAndroid=0;
       // int iEsIos=1;
      // int iEsWeb=2;
 
       double dScreenWidth=0;
       double dScreenHeigth=0;
-      late BuildContext context;
+      BuildContext? context;
+
+      PlatformAdmin();
 
 
-      PlatformAdmin(this.context);
+      void initDisplayData(BuildContext context){
+            this.context;
+            dScreenWidth=MediaQuery.of(context).size.width;
+            dScreenHeigth=MediaQuery.of(context).size.height;
+      }
 
       bool isAndroidPlatform(){
             return defaultTargetPlatform== TargetPlatform.android;

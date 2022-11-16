@@ -24,7 +24,6 @@ class App2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     MaterialApp materialappmobile = const MaterialApp();
-    DataHolder().initPlatform(context);
     // TODO: implement createState
 
     if (DataHolder().platformAdmin.isIosPlatform() ||
@@ -54,7 +53,6 @@ class App2 extends StatelessWidget {
         },
       );
     }
-
     return materialappmobile;
   }
 }

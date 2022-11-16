@@ -45,6 +45,11 @@ class _SplashViewState extends State<SplashView> {
 
   @override
   Widget build(BuildContext context) {
+    DataHolder().platformAdmin.initDisplayData(context);
+    print("TIENE UN ALTO DE "+DataHolder().platformAdmin.dScreenHeigth.toString());
+    print("TIENE UN ANCHO DE "+DataHolder().platformAdmin.dScreenWidth.toString());
+
+
     // TODO: implement build
     //isUserLogged(context);
     return Scaffold(

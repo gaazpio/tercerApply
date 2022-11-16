@@ -17,17 +17,17 @@ class DataHolder{
 
   double dScreenWidth=0;
   double dScreenHeigth=0;
+  late PlatformAdmin platformAdmin;
 
-late PlatformAdmin platformAdmin;
 
   DataHolder._internal(){
     sMensaje="";
-
+    platformAdmin=PlatformAdmin();
   }
 
-  void initPlatform(BuildContext context){
-    platformAdmin= PlatformAdmin(context);
-  }
+  //void initPlatformDisplaySettings(BuildContext context){
+  //  platformAdmin.initDisplayData(context);
+ // }
 
   factory DataHolder(){
     return _dataHolder;
