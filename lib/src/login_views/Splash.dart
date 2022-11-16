@@ -53,14 +53,17 @@ class _SplashViewState extends State<SplashView> {
     // TODO: implement build
     //isUserLogged(context);
     return Scaffold(
-        body: Container(
-          decoration: new BoxDecoration(
-              image: new DecorationImage(
-                image: new AssetImage("assets/walpaper.jpg"),
-                fit: BoxFit.fill,
-              )
-          ),
-        )
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+          children:[
+              Image(image: new AssetImage("assets/logo.png"),
+                width:DataHolder().platformAdmin.dScreenWidth/1.2,),
+              Text("CARGANDO...",style: TextStyle(fontSize: DataHolder().platformAdmin.dScreenWidth/20),),
+          ]
+
+        ),
+    ),
     );
   }
 
