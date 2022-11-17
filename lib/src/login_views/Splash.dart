@@ -33,15 +33,30 @@ class _SplashViewState extends State<SplashView> {
       Navigator.of(context).popAndPushNamed("/loginView");
     }
     else{
-      await DataHolder().descargarMIPerfil();
-      if(DataHolder().isMIPerfilDownloaded()==true){
-        Navigator.of(context).popAndPushNamed("/casaview");
+      bool existe=await checkExistingProfile();
+      if(existe){
+        setState(() {
+          Navigator.of(context).popAndPushNamed("/casaview");
+        });
       }
       else{
         Navigator.of(context).popAndPushNamed("/onboarding");
       }
     }
   }
+
+
+  Future<bool> checkExistingProfile() async{
+    String? idUser=FirebaseAuth.instance.currentUser?.uid;
+    FirebaseFirestore db = FirebaseFirestore.instance;
+    final docRef = db.collection("perfiles").doc(idUser);
+
+    DocumentSnapshot docsnap= await docRef.get();
+
+    return docsnap.exists;
+  }
+
+
 
   @override
   Widget build(BuildContext context) {

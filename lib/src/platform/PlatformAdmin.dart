@@ -27,12 +27,8 @@ class PlatformAdmin{
             return defaultTargetPlatform== TargetPlatform.iOS;
       }
       bool isWebPlatform(){
-            return defaultTargetPlatform != TargetPlatform.windows
-                && defaultTargetPlatform== TargetPlatform.android
-                && defaultTargetPlatform== TargetPlatform.iOS
-                && defaultTargetPlatform== TargetPlatform.fuchsia
-                && defaultTargetPlatform== TargetPlatform.linux
-                && defaultTargetPlatform== TargetPlatform.macOS;
+            return defaultTargetPlatform != TargetPlatform.iOS
+                && defaultTargetPlatform != TargetPlatform.android;
       }
 
 
