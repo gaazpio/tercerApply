@@ -59,9 +59,9 @@ class _SplashViewState extends State<SplashView> {
           children:[
               Image(image: new AssetImage("assets/logo.png"),
                 width:DataHolder().platformAdmin.dScreenWidth/1.2,),
-              Text("CARGANDO...",style: TextStyle(fontSize: DataHolder().platformAdmin.dScreenWidth/20),),
+             Padding(padding:  EdgeInsets.fromLTRB(10, 55, 0, 10),
+               child:Text("CARGANDO...",style: TextStyle(fontSize: DataHolder().platformAdmin.dScreenWidth/20,color: Colors.black54))),
           ]
-
         ),
     ),
     );

@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:first_project/src/default_views/ChatView.dart';
+import 'package:first_project/src/default_views/ChatViewWeb.dart';
 import 'package:first_project/src/login_views/HomeView.dart';
 import 'package:first_project/src/login_views/LoginView.dart';
 import 'package:first_project/src/login_views/OnBoardingView.dart';
@@ -48,7 +49,7 @@ class App2 extends StatelessWidget {
           "/registerview": (context) => RegisterView(),
           "/casaview": (context) => HomeView(),
           "/onboarding": (context) => OnBoardingView(),
-          "/chatview": (context) => ChatView(),
+          "/chatviewweb": (context) => ChatViewWeb(),
           "/splash": (context) => SplashView(),
         },
       );
