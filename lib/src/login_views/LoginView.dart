@@ -70,7 +70,7 @@ class LoginView extends StatelessWidget {
                   textAlign: TextAlign.left,
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
-                    fontSize: 30,
+                    fontSize: 28,
                     fontWeight: FontWeight.bold,
                     color: Color.fromRGBO(240, 240, 240, 20),
                   ),

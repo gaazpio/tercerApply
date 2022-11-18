@@ -25,6 +25,11 @@ class App2 extends StatelessWidget {
    if (DataHolder().platformAdmin.isIosPlatform() ||
         DataHolder().platformAdmin.isAndroidPlatform()) {
       materialappmobile = MaterialApp(
+        theme: ThemeData(
+          textTheme: GoogleFonts.alegreyaTextTheme(
+            Theme.of(context).textTheme,
+          ),
+        ),
         initialRoute: "/splash",
         routes: {
           "/loginView": (context) => LoginView(),
@@ -39,7 +44,7 @@ class App2 extends StatelessWidget {
     else if (DataHolder().platformAdmin.isWebPlatform()) {
       materialappmobile = MaterialApp(
         theme: ThemeData(
-          textTheme: GoogleFonts.alegreyaTextTheme(
+          textTheme: GoogleFonts.anekLatinTextTheme(
             Theme.of(context).textTheme,
           ),
         ),
