@@ -65,23 +65,49 @@ class _AdministrarViewState extends State<AdministrarView> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.fromLTRB(10, 0, 20, 25),
-                child: Text(
-                  'Welcome to your account',
-                  textAlign: TextAlign.center,
-                  overflow: TextOverflow.ellipsis,
-                  style: TextStyle(
-                    fontSize: 13,
-                    fontWeight: FontWeight.bold,
-                    color: Color.fromRGBO(240, 240, 240, 20),
+                padding: EdgeInsets.fromLTRB(10, 40, 20, 25),
+
+                child:OutlinedButton(
+                  onPressed: () {
+                    Navigator.of(context).popAndPushNamed("/registerview");
+                  },
+                  style: OutlinedButton.styleFrom(
+                      backgroundColor: Color.fromRGBO(210, 210, 210, 20)),
+                  child: Text
+                    ("Registrarte con nueva cuenta",style:TextStyle(fontSize: 14,color: Color.fromRGBO(135, 10, 1, 20),)
                   ),
                 ),
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                ],
+              Padding(
+                padding: EdgeInsets.fromLTRB(10, 0, 20, 25),
+
+                child:OutlinedButton(
+                  onPressed: () {
+                    Navigator.of(context).popAndPushNamed("/loginView");
+                  },
+                  style: OutlinedButton.styleFrom(
+                      backgroundColor: Color.fromRGBO(210, 210, 210, 20)),
+                  child: Text
+                    ("Logearte con otra cuenta",style:TextStyle(fontSize: 14,color: Color.fromRGBO(135, 10, 1, 20),)
+                  ),
+                ),
               ),
+
+              Padding(
+                padding: EdgeInsets.fromLTRB(10, 0, 20, 25),
+
+                child:OutlinedButton(
+                  onPressed: () {
+                    Navigator.of(context).popAndPushNamed("/casaview");
+                  },
+                  style: OutlinedButton.styleFrom(
+                      backgroundColor: Color.fromRGBO(210, 210, 210, 20)),
+                  child: Text
+                    ("Volver a los chats",style:TextStyle(fontSize: 14,color: Color.fromRGBO(135, 10, 1, 20),)
+                  ),
+                ),
+              ),
+
             ],
           ),
         ),
