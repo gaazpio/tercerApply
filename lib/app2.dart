@@ -30,7 +30,7 @@ class App2 extends StatelessWidget {
           "/casaview": (context) => HomeView(),
           "/onboarding": (context) => OnBoardingView(),
           "/chatview": (context) => ChatView(),
-          "/splash": (context) => SplashView(),
+          "/splash": (context) =>SplashView("assets/walpaper.jpg"),
         },
       );
     }
@@ -43,7 +43,7 @@ class App2 extends StatelessWidget {
           "/casaview": (context) => HomeView(),
           "/onboarding": (context) => OnBoardingView(),
           "/chatview": (context) => ChatView(),
-          "/splash": (context) => SplashView(),
+          "/splash": (context) =>SplashView("assets/logo.png"),
         },
       );
    }

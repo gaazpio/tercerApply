@@ -8,6 +8,11 @@ import '../singleton/DataHolder.dart';
 
 
 class SplashView extends StatefulWidget{
+  final String sLogoPath;
+  const SplashView(this.sLogoPath, {super.key});
+
+
+
   @override
   State<StatefulWidget> createState() {
 
@@ -56,14 +61,11 @@ class _SplashViewState extends State<SplashView> {
     return docsnap.exists;
   }
 
-
-
   @override
   Widget build(BuildContext context) {
     DataHolder().platformAdmin.initDisplayData(context);
     print("TIENE UN ALTO DE "+DataHolder().platformAdmin.dScreenHeigth.toString());
     print("TIENE UN ANCHO DE "+DataHolder().platformAdmin.dScreenWidth.toString());
-
 
     // TODO: implement build
     //isUserLogged(context);
@@ -72,7 +74,7 @@ class _SplashViewState extends State<SplashView> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
           children:[
-              Image(image: new AssetImage("assets/logo.png"),
+              Image(image: AssetImage(widget.sLogoPath),
                 width:DataHolder().platformAdmin.dScreenWidth/1.2,),
              Padding(padding:  EdgeInsets.fromLTRB(10, 55, 0, 10),
                child:Text("CARGANDO...",style: TextStyle(fontSize: DataHolder().platformAdmin.dScreenWidth/20,color: Colors.black54))),
