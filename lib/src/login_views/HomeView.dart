@@ -79,6 +79,19 @@ Navigator.of(context).pushNamed("/chatview");
           title: Text('Chats'),
           automaticallyImplyLeading: false,
           backgroundColor:Color.fromRGBO(112, 0, 0, 20),
+            actions: <Widget> [
+              Padding(padding: EdgeInsets.symmetric(horizontal: 50, vertical: 0),
+              child:  IconButton(
+                icon: Icon(
+                  Icons.settings,
+                  color: Colors.white,
+                ),
+                onPressed: () {
+                  Navigator.of(context).popAndPushNamed("/administrar");
+                  // do something
+                },
+              )),
+           ],
         ),
 
         body: Center(

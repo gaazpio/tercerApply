@@ -9,6 +9,7 @@ import 'package:first_project/src/login_views/OnBoardingView.dart';
 import 'package:first_project/src/login_views/RegisterView.dart';
 import 'package:first_project/src/login_views/Splash.dart';
 import 'package:first_project/src/singleton/DataHolder.dart';
+import 'package:first_project/src/web_views/AdministrarView.dart';
 import 'package:flutter/material.dart';
 
 class App2 extends StatelessWidget {
@@ -30,7 +31,7 @@ class App2 extends StatelessWidget {
           "/casaview": (context) => HomeView(),
           "/onboarding": (context) => OnBoardingView(),
           "/chatview": (context) => ChatView(),
-          "/splash": (context) =>SplashView("assets/walpaper.jpg"),
+          "/splash": (context) =>SplashView("assets/homer.png"),
         },
       );
     }
@@ -44,6 +45,7 @@ class App2 extends StatelessWidget {
           "/onboarding": (context) => OnBoardingView(),
           "/chatview": (context) => ChatView(),
           "/splash": (context) =>SplashView("assets/logo.png"),
+          "/administrar": (context) =>AdministrarView(),
         },
       );
    }

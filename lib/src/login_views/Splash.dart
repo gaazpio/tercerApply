@@ -74,8 +74,9 @@ class _SplashViewState extends State<SplashView> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
           children:[
-              Image(image: AssetImage(widget.sLogoPath),
-                width:DataHolder().platformAdmin.dScreenWidth/1.2,),
+            Padding(padding: EdgeInsets.fromLTRB(30, 55, 0, 10),
+            child:Image(image: AssetImage(widget.sLogoPath),
+              width:DataHolder().platformAdmin.dScreenWidth/1.2,)),
              Padding(padding:  EdgeInsets.fromLTRB(10, 55, 0, 10),
                child:Text("CARGANDO...",style: TextStyle(fontSize: DataHolder().platformAdmin.dScreenWidth/20,color: Colors.black54))),
           ]
