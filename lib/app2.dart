@@ -11,6 +11,7 @@ import 'package:first_project/src/login_views/Splash.dart';
 import 'package:first_project/src/singleton/DataHolder.dart';
 import 'package:first_project/src/web_views/AdministrarView.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class App2 extends StatelessWidget {
   App2({Key? key}) : super(key: key);
@@ -37,6 +38,11 @@ class App2 extends StatelessWidget {
     }
     else if (DataHolder().platformAdmin.isWebPlatform()) {
       materialappmobile = MaterialApp(
+        theme: ThemeData(
+          textTheme: GoogleFonts.alegreyaTextTheme(
+            Theme.of(context).textTheme,
+          ),
+        ),
         initialRoute: "/splash",
         routes: {
           "/loginView": (context) => LoginView(),
