@@ -12,6 +12,7 @@ import 'package:first_project/src/login_views/Splash.dart';
 import 'package:first_project/src/singleton/DataHolder.dart';
 import 'package:first_project/src/web_views/AdministrarView.dart';
 import 'package:first_project/src/web_views/HomeViewWeb.dart';
+import 'package:first_project/src/web_views/LoginViewWeb.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -53,7 +54,7 @@ class App2 extends StatelessWidget {
         ),
         initialRoute: "/splash",
         routes: {
-          "/loginView": (context) => LoginView(),
+          "/loginView": (context) => LoginViewWeb(),
           "/registerview": (context) => RegisterView(),
           "/casaview": (context) => HomeViewWeb(),
           "/onboarding": (context) => OnBoardingView(),
