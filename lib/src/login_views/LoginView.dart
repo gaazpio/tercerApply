@@ -21,7 +21,9 @@ class LoginView extends StatelessWidget {
     }
   }
 
-
+void loginwithphone(BuildContext context){
+  Navigator.of(context).popAndPushNamed("/loginphoneview");
+}
 
 
   @override
@@ -89,6 +91,7 @@ class LoginView extends StatelessWidget {
                   ),
                 ),
               ),
+
               Padding(
                 padding: EdgeInsets.fromLTRB(5, 0, 0, 10),
                 child: iUser,
@@ -115,7 +118,17 @@ class LoginView extends StatelessWidget {
                       ("Sign In",style:TextStyle(fontSize: 14,color: Color.fromRGBO(135, 10, 1, 20),)
                     ),
                   ),
-                  btn1()
+                  btn1(),
+                  OutlinedButton(
+                    onPressed: () {
+                      loginwithphone(BuildContextcontext);
+                    },
+                    style: OutlinedButton.styleFrom(
+                        backgroundColor: Color.fromRGBO(210, 210, 210, 20)),
+                    child: Text
+                      ("Phone Login",style:TextStyle(fontSize: 14,color: Color.fromRGBO(135, 10, 1, 20),)
+                    ),
+                  ),
                 ],
               ),
             ],

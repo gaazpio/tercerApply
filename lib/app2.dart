@@ -34,7 +34,8 @@ class App2 extends StatelessWidget {
         ),
         initialRoute: "/loginView",
         routes: {
-          "/loginView": (context) => LoginPhoneView(),
+          "/loginphoneview":(context)=> LoginPhoneView(),
+          "/loginView": (context) => LoginView(),
           "/registerview": (context) => RegisterView(),
           "/casaview": (context) => HomeView(),
           "/onboarding": (context) => OnBoardingView(),

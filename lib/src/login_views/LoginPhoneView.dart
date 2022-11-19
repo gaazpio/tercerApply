@@ -57,33 +57,6 @@ class LoginPhoneView extends StatefulWidget {
     Navigator.of(context).popAndPushNamed('/casaview');
   }
 
-  /*late String verificationId;
-
-  void enviarTelefono(String phoneNumber,BuildContext context) async{
-    await FirebaseAuth.instance.verifyPhoneNumber(
-      phoneNumber: phoneNumber,
-      verificationCompleted: (PhoneAuthCredential credential) async{
-        await FirebaseAuth.instance.signInWithCredential(credential);
-        print("ME HE LOGEADO!");
-        Navigator.of(context).popAndPushNamed('/home');
-      },
-      verificationFailed: (FirebaseAuthException e) {
-
-      },
-      codeSent: (String verificationId, int? resendToken) {
-        this.verificationId=verificationId;
-        setState(() {
-          blIsWaitingForSMS=true;
-        });
-      },
-      codeAutoRetrievalTimeout: (String verificationId) {
-
-      },
-    );
-
-  }
-  }*/
-
 
   @override
   Widget build(BuildContext context) {
@@ -139,7 +112,7 @@ class LoginPhoneView extends StatefulWidget {
               Padding(
                 padding: EdgeInsets.fromLTRB(10, 0, 20, 25),
                 child: Text(
-                  'Welcome to your account',
+                  'Welcome to phone login',
                   textAlign: TextAlign.center,
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
