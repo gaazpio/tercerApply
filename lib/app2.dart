@@ -10,6 +10,7 @@ import 'package:first_project/src/login_views/RegisterView.dart';
 import 'package:first_project/src/login_views/Splash.dart';
 import 'package:first_project/src/singleton/DataHolder.dart';
 import 'package:first_project/src/web_views/AdministrarView.dart';
+import 'package:first_project/src/web_views/HomeViewWeb.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -52,7 +53,7 @@ class App2 extends StatelessWidget {
         routes: {
           "/loginView": (context) => LoginView(),
           "/registerview": (context) => RegisterView(),
-          "/casaview": (context) => HomeView(),
+          "/casaview": (context) => HomeViewWeb(),
           "/onboarding": (context) => OnBoardingView(),
           "/chatview": (context) => ChatView(),
           "/splash": (context) =>SplashView("assets/logo.png"),
