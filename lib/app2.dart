@@ -4,6 +4,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:first_project/src/default_views/ChatView.dart';
 import 'package:first_project/src/default_views/ChatViewWeb.dart';
 import 'package:first_project/src/login_views/HomeView.dart';
+import 'package:first_project/src/login_views/LoginPhoneView.dart';
 import 'package:first_project/src/login_views/LoginView.dart';
 import 'package:first_project/src/login_views/OnBoardingView.dart';
 import 'package:first_project/src/login_views/RegisterView.dart';
@@ -31,9 +32,9 @@ class App2 extends StatelessWidget {
             Theme.of(context).textTheme,
           ),
         ),
-        initialRoute: "/splash",
+        initialRoute: "/loginView",
         routes: {
-          "/loginView": (context) => LoginView(),
+          "/loginView": (context) => LoginPhoneView(),
           "/registerview": (context) => RegisterView(),
           "/casaview": (context) => HomeView(),
           "/onboarding": (context) => OnBoardingView(),
